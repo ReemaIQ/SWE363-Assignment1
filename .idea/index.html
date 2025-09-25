@@ -8,6 +8,7 @@
 
     <!--    CSS LINK -->
     <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
@@ -22,8 +23,9 @@
 </nav>
 
 <!-- ====== HEADER ====== -->
-<section id="header" class="hero">
+<section id="hero" class="hero">
     <div class="hero__content">
+        <p id="greeting"></p>
         <h1>Reema’s Portfolio</h1>
 <!--        <p><br></p>-->
         <p>Designing Systems That Work &nbsp;&nbsp;&nbsp;&nbsp; and Stories That Inspire.</p>
@@ -111,13 +113,47 @@
     <section id="contact">
         <h2>Contact</h2>
 
-        <p>Email:<a href="mailto:Reeema.work@gmail.com">Reeema.work@gmail.com</a></p>
-        <p>KFUPM Email:<a href="mailto:s202244660@kfupm.edu.sa">s202244660@kfupm.edu.sa</a></p>
-        <p>LinkedIn:<a href="https://www.linkedin.com/in/reema-ibrahim-53ba5236a/" target="_blank">My LinkedIn Page</a></p>
-        <p>Phone:<a href="tel:+966570606530">Call me on +966 57 060 6530</a></p>
-        <p><a href="sms:+966570606530">Send me a text</a></p>
+        <!-- ===== Contact Links (Quick access) ===== -->
+        <div class="contact-links">
+            <p>Email: <a href="mailto:Reeema.work@gmail.com">Reeema.work@gmail.com</a></p>
+            <p>KFUPM Email: <a href="mailto:s202244660@kfupm.edu.sa">s202244660@kfupm.edu.sa</a></p>
+            <p>LinkedIn:
+                <a href="https://www.linkedin.com/in/reema-ibrahim-53ba5236a/" target="_blank" rel="noopener noreferrer">
+                    My LinkedIn Page
+                </a>
+            </p>
+            <p>Phone: <a href="tel:+966570606530">+966 57 060 6530</a></p>
+            <p><a href="sms:+966570606530">Send me a text</a></p>
+        </div>
 
+        <!-- ===== Contact Form  ===== -->
+        <form id="contact-form" novalidate>
+            <!-- Name field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required>
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required>
+            </div>
+
+            <!-- Message field -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="form-btn">Send</button>
+
+            <!-- Status message (shown after submission via JS) -->
+            <p id="form-status" aria-live="polite"></p>
+        </form>
     </section>
+
 
 </main>
 

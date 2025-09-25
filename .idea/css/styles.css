@@ -10,6 +10,8 @@ body {
     scroll-behavior: smooth;           /* When you click a link that jumps to a section, the page scrolls smoothly instead of instantly.) */
 }
 
+
+
 /* ===== Background layers ===== */
 /*body::before, body::after, Create two extra, fake elements attached to the body. We’ll use them to paint fancy backgrounds.*/
 
@@ -198,4 +200,87 @@ footer {
 
 #contact a:visited {
     color: #ffffff;            /* force visited links to stay white */
+}
+
+/* ===== Contact Section Layout ===== */
+#contact {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;     /* Center horizontally */
+    gap: 2rem;               /* Space between links and form */
+}
+
+/* Quick access links */
+.contact-links p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+/* ===== Form Container ===== */
+#contact form {
+    width: 100%;
+    max-width: 600px;         /* Keeps form from being too wide */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;              /* Space between fields */
+}
+
+/* ===== Form Groups (Label + Input) ===== */
+.form-group {
+    display: flex;
+    flex-direction: column;   /* Label above input */
+    align-items: flex-start;  /* Left-align inside form */
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #eadaff;           /* Lavender for headings */
+}
+
+/* ===== Inputs & Textarea ===== */
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #b177f5;             /* Purple border */
+    border-radius: 10px;                   /* Rounded corners */
+    background: rgba(20, 1, 40, 0.6);      /* Dark glass effect */
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Glow effect */
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #b300ff;                 /* Bright purple on focus */
+    box-shadow: 0 0 12px rgba(179,0,255,0.6);
+    outline: none;
+}
+
+/* ===== Submit Button ===== */
+.form-btn {
+    align-self: center;                     /* Center button */
+    padding: 0.8rem 2rem;
+    border: 2px solid #fff;                 /* White outline */
+    border-radius: 30px;                    /* Pill shape */
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;              /* Smooth hover */
+}
+
+.form-btn:hover {
+    background: #b300ff;                    /* Neon purple hover */
+    border-color: #b300ff;
+    box-shadow: 0 0 20px rgba(179,0,255,0.6);
+}
+
+/* ===== Status Message (after form submit) ===== */
+#form-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #eadaff;                         /* Soft lavender */
 }
