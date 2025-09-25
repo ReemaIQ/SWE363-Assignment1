@@ -144,6 +144,14 @@ section ul li:last-child {
 
 
 /* ===================== HERO ===================== */
+/* Hero logo styling */
+.hero-logo {
+    width: 300px;          /* adjust size */
+    height: auto;          /* keep proportions */
+    margin-bottom: 1rem;   /* space below logo */
+    filter: drop-shadow(0 0 8px rgba(179,0,255,0.6)); /* glowing effect */
+}
+
 .hero {
     display: flex;                        /* Flexbox to center content */
     flex-direction: column;               /* Stack heading, subtext, button vertically */
@@ -283,4 +291,18 @@ footer {
     text-align: center;
     font-size: 1rem;
     color: #eadaff;                         /* Soft lavender */
+}
+
+/* ===== Mobile adjustments ===== */
+@media (max-width: 600px) {
+    section {
+        padding: 6rem 1.25rem; /* less vertical space on small screens */
+    }
+    section h2 {
+        font-size: 2.25rem;    /* smaller headings on mobile */
+        margin-bottom: 2rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;     /* shrink hero title for small screens */
+    }
 }
