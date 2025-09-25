@@ -104,6 +104,14 @@ This is toggled by JS to indicate the currently-viewed section. */
 
 
 /* ===================== SECTIONS ===================== */
+.project-stickers {
+    width: 100px;          /* adjust size */
+    height: auto;          /* keep proportions */
+    margin: 0 auto 1rem;   /* centers horizontally + keeps space below */
+    display: block;        /* required for margin auto to work */
+}
+
+
 strong {
     font-weight: bold;   /* already bold by default, but we keep it */
     font-size: 1.2em;    /* makes it 1.5x bigger than the surrounding text */

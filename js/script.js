@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let minutes = now.getMinutes();// get minutes (0-59)
         let seconds = now.getSeconds();// get seconds (0-59)
 
-        // Start with a default message
-        let msg = "Welcome to my portfolio!";
 
         // Change greeting depending on the time of day
         if (hour < 12) {
